@@ -1,3 +1,7 @@
+<?php
+  session_start();
+  include "BDD.php";
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,14 +12,11 @@
 </head>
 <body>
   <div id="header-placeholder"></div>
-
-  <main>
-    <h1>Bienvenue sur notre site !</h1>
-    <p>Contenu principal de la page.</p>
-  </main>
-
+<div class="container">
+    
+</div>
   <div id="footer-placeholder"></div>
-
   <script src="Scripts/script.js"></script>
 </body>
+
 </html>

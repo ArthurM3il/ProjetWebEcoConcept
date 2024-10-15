@@ -15,5 +15,7 @@ function includeHTML() {
       });
   }
   
-  // Appel de la fonction pour charger le header et le footer
-  includeHTML();
+// Appel de la fonction pour charger le header et le footer
+includeHTML();
+  
+

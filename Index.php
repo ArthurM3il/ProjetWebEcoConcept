@@ -1,22 +1,24 @@
 <?php
-  session_start();
-  include "BDD.php";
+require 'includes/bdd.php';
+require 'includes/header.php';
+require 'includes/menu.php';
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page d'accueil</title>
-  <link rel="stylesheet" href="Styles/style.css">
-</head>
-<body>
-  <div id="header-placeholder"></div>
-<div class="container">
-    
-</div>
-  <div id="footer-placeholder"></div>
-  <script src="Scripts/script.js"></script>
-</body>
 
-</html>
+<h2>Accueil</h2>
+
+<div id="viewer">
+    <!-- Contenu du viewer chargé via AJAX -->
+</div>
+
+<div id="presentation">
+    <?php
+    // Récupérer et afficher le texte de présentation depuis la BDD
+    // ...
+    ?>
+</div>
+
+<script src="js/viewer.js"></script>  <!-- Script pour le viewer AJAX -->
+
+<?php
+require 'includes/footer.php';
+?>

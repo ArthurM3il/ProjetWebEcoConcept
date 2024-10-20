@@ -1,0 +1,99 @@
+/* Général */
+body {
+    background-color: #000; /* Noir */
+    color: #fff; /* Blanc */
+    font-family: 'Roboto', sans-serif; /* Police moderne, à adapter */
+    line-height: 1.6;
+  }
+  
+  /* Typographie */
+  h1, h2, h3 {
+    font-family: 'Metal Mania', sans-serif; /* Police métal, à importer ou remplacer */
+    text-shadow: 2px 2px 4px #f00; /* Ombre rouge */
+  }
+  
+  h1 {
+    font-size: 3em;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 2em;
+  }
+  
+  h3 {
+      font-size: 1.5em;
+  }
+  
+  
+  p {
+    font-size: 1.2em; /* Légèrement plus grand pour une meilleure lisibilité */
+  }
+  
+  a {
+      color: #f00; /* Rouge */
+      text-decoration: none; /* Pas de soulignement */
+  }
+  
+  a:hover {
+      text-decoration: underline;
+  
+  }
+  
+  
+  
+  /* Sections et conteneurs */
+  
+  
+  /* Exemples d'utilisation de Flexbox */
+  header, nav, main, footer {
+      display: flex; /* Pour pouvoir utiliser Flexbox */
+      width: 90%;  /* Occupe 90% de la largeur */
+      margin: 10px auto;  /* Centré */
+  
+  }
+  
+  
+  header { /* Peut être utile si vous avez un logo et un titre */
+    justify-content: space-between;  /* Espace entre logo et titre */
+    align-items: center;  /* Alignement vertical au centre */
+  }
+  
+  
+  nav {  /* navigation principale */
+    justify-content: space-around;  /* Espace autour des éléments du menu */
+  
+  }
+  nav a {  /* liens du menu principal*/
+      display: block;
+      padding: 10px; /*Pour un clic facile sur smartphone*/
+  
+  }
+  
+  
+  main {  /* Pour centrer la zone principale du site */
+      flex-direction: column; /* Contenu vertical par défaut*/
+      align-items: center;
+  }
+  
+  
+  footer {
+      justify-content: center; /* Pour centrer le contenu du footer */
+  
+  }
+  
+  /*Classes pour images*/
+  
+  .portrait {
+      max-width: 200px;  /* Limite la largeur pour mobile */
+  }
+  
+  
+  /*Classes pour background spécifique etc..*/
+  .bloody {
+      background-image: url("images/bloody_texture.jpg");
+  
+  }
+  .fire {
+      background-image: url("images/fire_texture.jpg");
+  }

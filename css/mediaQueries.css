@@ -1,8 +1,0 @@
-  /* Media Queries (à adapter) */
-  @media (max-width: 768px) {  /* Pour tablette et mobile */
-  
-    main { /* Pour du contenu en colonne sur écran petit */
-      flex-direction: column; /* déjà en colonne par défaut donc facultatif*/
-
-    }
-}

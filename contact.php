@@ -7,8 +7,7 @@ require 'includes/menu.php';
 <h2>Contact</h2>
 
 <?php
-//  Récupérer et afficher les infos de contact
-// ...
+
 ?>
 
 

@@ -4,7 +4,6 @@ require '../includes/bdd.php';
 
 if(isset($_POST['login'])) {
   // Vérification du login (requête BDD)
-    // ...
 
 
     if ($login_valide) {
@@ -13,6 +12,5 @@ if(isset($_POST['login'])) {
         exit();
     } else {
         // Afficher un message d'erreur
-        // ...
     }
 }

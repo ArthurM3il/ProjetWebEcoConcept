@@ -9,4 +9,4 @@
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mediaQueries.css">
 </head>
 <body>
-<div id="admin"></div>
+<div id="admin"><!--  Pour CSS spécifique si administrateur --></div>

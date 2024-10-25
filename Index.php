@@ -1,8 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
 <?php
-require 'includes/bdd.php';
-require 'includes/header.php';
-require 'includes/menu.php';
+    require 'includes/bdd.php';
+    session_start();
 ?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La terre des anges</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/polices.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mediaQueries.css">
+</head>
+<header><?php
+require_once 'includes/menu.php';
+require_once 'includes/function.php';
+$presentation = getPresentation($bdd);
+?></header>
+<body>
+<div id="admin"><!--  Pour CSS spécifique si administrateur --></div>
 
 <div class="container">
 <h2>Accueil</h2>
@@ -10,24 +26,23 @@ require 'includes/menu.php';
 <div id="carousel-container">
     <div id="carousel">
     </div>
-
     <div class="carousel-controls">
         <button id="prev-button">❮</button>
         <button id="next-button">❯</button>
     </div>
-
 </div>
 
 <div id="presentation">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nunc purus, consectetur vitae ligula a, lacinia luctus urna. Phasellus accumsan ac ipsum id rhoncus. Nam pharetra odio ipsum, eu consequat tellus pharetra sit amet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque tortor orci, sagittis in magna in, elementum aliquam libero. Proin vel volutpat justo, at facilisis tortor. Quisque nec sapien eleifend, accumsan dolor sit amet, elementum ex. Aenean et felis at quam facilisis scelerisque sit amet vitae justo. Fusce eget pulvinar lectus. Donec velit ante, rhoncus at ullamcorper vel, fringilla id enim. Donec tincidunt diam vitae leo dictum faucibus. Aliquam sed vulputate lacus. Nulla quis massa sed libero ultricies imperdiet.</p>
-    <?php
-    
-    ?>
+    <p><?php echo $presentation->texte ?></p>
 </div>
 </div>
 
 
-<script src="js/viewer.js"></script>  
+<script src="js/viewer.js"></script>
+</body>
+<footer>
 <?php
 require 'includes/footer.php';
 ?>
+</footer>
+</html>

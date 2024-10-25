@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+<h1>La Terre des Anges</h1>
 <nav>
     <a href="index.php">Accueil</a>
     <a href="description.php">Descriptions</a>
@@ -8,5 +6,5 @@ session_start();
     <?php if(isset($_SESSION['admin'])): ?>
         <a href="admin/logout.php">Déconnexion</a>
     <?php endif; ?>
-    <a href="admin/">Administration</a>
+    <a href="admin/connexion.php">Administration</a>
 </nav>

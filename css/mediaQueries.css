@@ -1,0 +1,27 @@
+
+/* Description */
+@media (max-width: 700px) {
+
+    #descriptions {
+        flex-direction: column; /* Fallback vertical layout for the image block  itself */
+        align-items: center; /* Still, try and centre what you can */
+        width: 100%; /* Or take the whole of page width */
+
+
+    }
+
+
+    .description {
+
+        flex-direction: column; /* Vertical layout */
+        align-items: center;
+    }
+
+
+    .description img {
+        margin-right: 0; /* Remove margin */
+        margin-bottom: 10px; /* Add bottom margin */
+        max-width: 90%; /* Or percentage to fit */
+    }
+
+}

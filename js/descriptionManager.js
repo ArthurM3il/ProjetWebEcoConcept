@@ -18,6 +18,7 @@ const form = document.getElementById('Description');
     .then(data => {
       console.log('Réponse du serveur:', data);
       alert(data);
+      form.reset();
     })
     .catch(error => {
       console.error('Erreur:', error);

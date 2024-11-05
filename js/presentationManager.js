@@ -15,6 +15,7 @@ console.log(formPres);
     .then(data => {
       console.log('Réponse du serveur:', data);
       alert(data);
+      formPres.reset();
     })
     .catch(error => {
       console.error('Erreur:', error);

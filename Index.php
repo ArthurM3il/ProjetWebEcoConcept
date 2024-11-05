@@ -12,12 +12,15 @@
     <link rel="stylesheet" href="css/polices.css">
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mediaQueries.css">
 </head>
+
+<body>
+
 <header><?php
 require_once 'includes/menu.php';
 require_once 'includes/function.php';
 $presentation = getPresentation($bdd);
 ?></header>
-<body>
+
 <div id="admin"><!--  Pour CSS spécifique si administrateur --></div>
 
 <div class="container">
@@ -37,12 +40,13 @@ $presentation = getPresentation($bdd);
 </div>
 </div>
 
-
-<script src="js/viewer.js"></script>
-</body>
 <footer>
 <?php
 require 'includes/footer.php';
 ?>
 </footer>
+
+<script src="js/viewer.js"></script>
+</body>
+
 </html>

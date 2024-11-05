@@ -3,14 +3,19 @@ session_start();
 require '../includes/bdd.php';
 
 if(isset($_POST['login'])) {
-  // Vérification du login (requête BDD)
+    $username = $_POST['login'];
+    $password = $_POST['password'];
+    $sql = "SELECT * FROM Users WHERE username = :login AND mdp = :mdp";
+    $stmt = $bdd->prepare($sql);
+    $stmt->bindParam(':login', $username);
+    $stmt->bindParam(':mdp', $password);
+    $stmt->execute();
 
-
-    if ($login_valide) {
+    if ($stmt->rowCount() > 0) {
         $_SESSION['admin'] = true;
-        header('Location: description.php');
+        header('Location: admin.php');
         exit();
     } else {
-        // Afficher un message d'erreur
+        $error_message = "Invalid login credentials.";
     }
 }

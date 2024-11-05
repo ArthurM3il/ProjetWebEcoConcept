@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <images>
-    <image alt="Poterie 1">IMGViewer/image1.jpg</image>
-    <image alt="Poterie 2">IMGViewer/image2.jpg</image>
-    <image alt="Poterie 3">IMGViewer/image3.jpg</image>
-    <image alt="Poterie 4">IMGViewer/image4.jpg</image>
+    <image alt="Poterie 1">IMGViewer/images/image1.jpg</image>
+    <image alt="Poterie 2">IMGViewer/images/image2.jpg</image>
+    <image alt="Poterie 3">IMGViewer/images/image3.jpg</image>
+    <image alt="Poterie 4">IMGViewer/images/image4.jpg</image>
 </images>

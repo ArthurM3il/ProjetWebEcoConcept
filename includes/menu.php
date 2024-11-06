@@ -1,4 +1,4 @@
-<h1>La Terre des Anges</h1>
+<img id="logo" src="./assets/imgs/logo.png">
 <nav>
     <a href="index.php">Accueil</a>
     <a href="description.php">Descriptions</a>

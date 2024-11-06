@@ -8,9 +8,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La terre des anges - Descriptions</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/polices.css">
-    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mediaQueries.css">
+    <link rel="stylesheet" href="css/style-minified.css" type="text/css" media="print">
+    <link rel="stylesheet" href="css/style-minified.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mediaQueries-minified.css">
 </head>
 <header><?php
 require_once 'includes/menu.php';
@@ -19,6 +19,7 @@ $descriptions = getDescriptions($bdd);
 ?>
 </header>
 <body>
+    <div class="container">
 <h2>Descriptions</h2>
 
 <div id="descriptions">
@@ -33,6 +34,7 @@ $descriptions = getDescriptions($bdd);
             <img src="assets/imgs/<?php echo $description["image"] ?>" alt="<?php echo $description["alt"] ?>">
         </div>
     <?php endforeach; ?>
+</div>
 </div>
 </body>
 

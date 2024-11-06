@@ -8,9 +8,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La terre des anges</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/polices.css">
-    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mediaQueries.css">
+    <link rel="stylesheet" href="css/style-minified.css" type="text/css" media="print">
+    <link rel="stylesheet" href="css/style-minified.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mediaQueries-minified.css">
 </head>
 
 <body>
@@ -20,8 +20,6 @@ require_once 'includes/menu.php';
 require_once 'includes/function.php';
 $presentation = getPresentation($bdd);
 ?></header>
-
-<div id="admin"><!--  Pour CSS spécifique si administrateur --></div>
 
 <div class="container">
 <h2>Accueil</h2>
@@ -46,7 +44,7 @@ require 'includes/footer.php';
 ?>
 </footer>
 
-<script src="js/viewer.js"></script>
+<script src="js/viewer-minified.js"></script>
 </body>
 
 </html>

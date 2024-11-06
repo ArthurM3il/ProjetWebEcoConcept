@@ -6,6 +6,8 @@ $desc = $_POST['desc'];
 $prix = $_POST['prix'];
 $titre = $_POST['titre'];
 
+$desc = nl2br($desc); #Concatener des <br> à la place des retours chariots classiques
+
 echo "Champ 1: " . $image . "\n";
 echo "Champ 2: " . $desc . "\n";
 echo "Champ 3: " . $prix . "\n";

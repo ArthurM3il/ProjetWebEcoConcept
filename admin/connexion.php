@@ -9,7 +9,6 @@ if (isset($_SESSION['admin'])) {
 <html>
 <head>
 <title>Connexion administrateur</title>
-<link rel="stylesheet" type="text/css" href="../css/form.css">
 </head>
 <body>
 <h2>Connexion Administrateur</h2>

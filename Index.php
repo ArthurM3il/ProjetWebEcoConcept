@@ -10,7 +10,7 @@
     <title>La terre des anges</title>
     <link rel="stylesheet" href="css/style-minified.css" type="text/css" media="print">
     <link rel="stylesheet" href="css/style-minified.css">
-    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mediaQueries.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mediaQueries-minified.css">
 </head>
 
 <body>

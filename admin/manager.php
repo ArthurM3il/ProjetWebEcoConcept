@@ -11,8 +11,6 @@ if (!isset($_SESSION['admin'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La terre des anges - Admin</title>
-    <link rel="stylesheet" href="../css/form.css">
-    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../css/mediaQueries-minified.css">
 </head>
 <body>
 <h3>Ajout d'une image de description</h3>
@@ -35,6 +33,19 @@ if (!isset($_SESSION['admin'])) {
     <textarea name="texte" id="texte" autocomplete="off" required rows="7" cols="20"></textarea>
     <input type="submit" value="Modifier">
 </form>
-<a href="../index.php">Retour à l'accueil</a>
 <script src="../js/presentationManager-minified.js"></script>
+
+<h3>Modification des contacts</h3>
+<form id="Contact" method="post" action="">
+    <label for="mail">Email</label>
+    <input type="email" name="mail" id="mail" autocomplete="off" required>
+    <label for="phone">Téléphone</label>
+    <input type="text" name="phone" id="phone" autocomplete="off" required>
+    <label for="Fb">Lien Facebook</label>
+    <input type="text" name="Fb" id="Fb" autocomplete="off" required>
+    <input type="submit" value="Modifier">
+</form>
+
+<a href="../index.php">Retour à l'accueil</a>
+<script src="../js/contactManager-minified.js"></script>
 </body>

@@ -1,0 +1,1 @@
+const formContact=document.getElementById("Contact");formContact.addEventListener("submit",t=>{t.preventDefault();let e=new FormData(formContact);fetch("../includes/contactManager.php",{method:"POST",body:e}).then(t=>t.text()).then(t=>{console.log("R\xe9ponse du serveur:",t),alert(t),formContact.reset()}).catch(t=>{console.error("Erreur:",t)})});

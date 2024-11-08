@@ -10,7 +10,7 @@
     <title>La terre des anges</title>
     <link rel="stylesheet" href="css/style-minified.css" type="text/css" media="print">
     <link rel="stylesheet" href="css/style-minified.css">
-    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mediaQueries-minified.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mediaQueries.css">
 </head>
 
 <body>
@@ -45,6 +45,7 @@ require 'includes/footer.php';
 </footer>
 
 <script src="js/viewer-minified.js"></script>
+<script src="js/burger.js"></script>
 </body>
 
 </html>

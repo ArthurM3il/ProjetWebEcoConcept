@@ -1,27 +1,250 @@
+/* mediaQueries.css */
 
-/* Description */
-@media (max-width: 700px) {
-
-    #descriptions {
-        flex-direction: column; /* Fallback vertical layout for the image block  itself */
-        align-items: center; /* Still, try and centre what you can */
-        width: 100%; /* Or take the whole of page width */
-
-
+@media screen and (max-width: 768px) {
+    body {
+      font-size: 16px; 
     }
-
-
+  
+    header, nav, main, footer {
+      width: 95%;
+    }
+  
+    h1 {
+      font-size: 2em;
+    }
+  
+    h2 {
+      font-size: 1.5em;
+    }
+  
+    h3 {
+      font-size: 1.2em;
+    }
+  
+    p, a {
+      font-size: 1em;
+    }
+  
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav a {
+      font-size: 1.2em;
+      padding: 5px;
+    }
+  
+    /* Carousel */
+    #carousel-container {
+      width: 90vw;
+      height: auto; 
+      max-height: 50vh; 
+      overflow: hidden;
+    }
+  
+    #carousel img {
+      width: 100%;
+      height: auto; 
+      object-fit: contain; 
+    }
+  
+    .carousel-controls button {
+      font-size: 1em;
+      padding: 5px 10px; 
+    }
+  
+    /* Descriptions */
     .description {
-
-        flex-direction: column; /* Vertical layout */
-        align-items: center;
+      flex-direction: column; 
+      align-items: center; 
     }
-
-
+  
     .description img {
-        margin-right: 0; /* Remove margin */
-        margin-bottom: 10px; /* Add bottom margin */
-        max-width: 90%; /* Or percentage to fit */
+      max-width: 90%;
+      margin: 10px 0; 
     }
+  
+  
+    #presentation{
+        width: 90%;
+    }
+  }
 
-}
+
+  /* CSS pour le menu burger */
+
+/* Styles de base pour tous les écrans */
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 20px; 
+    background-color: #fd7e1d;
+  }
+  
+  #logo {
+    height: 50px; /* Ou une autre taille appropriée */
+  }
+  
+  
+  /* Styles pour masquer la navigation par défaut */
+  nav {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden; 
+  opacity: 0;        
+  transition: opacity 0.3s, visibility 0.3s; 
+  transform: translateX(-100%);
+  }
+  
+  /* Styles pour le menu ouvert */
+  nav.open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  nav a {
+    display: block; 
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1.5em;
+    color: white;  
+    background-color: #fd7e1d;
+    border-radius: 5px; 
+  }
+  
+  
+  
+  /* Bouton burger */
+  .burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 101;
+  }
+  
+  .burger span {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    transition: 0.3s;
+  }
+  
+  .burger span:nth-child(1) {
+    top: 0;
+  }
+  
+  .burger span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .burger span:nth-child(3) {
+    bottom: 0;
+  }
+  
+  /* Animation du bouton burger */
+  .burger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .burger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .burger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  
+  
+  /* Media query pour les écrans plus larges (facultatif) */
+  @media (min-width: 768px) {
+    nav {
+      display: flex; 
+      position: static; 
+      width: auto;
+      height: auto;
+      background-color: transparent;
+      flex-direction: row; 
+      justify-content: space-around;
+    }
+  
+    nav a {
+      display: inline; 
+      margin: 0 10px;
+      padding: 10px;
+      font-size: 1.2em;
+      color: black; 
+      background: none;
+    }
+      nav.open{
+          transform:translateX(0%);
+      }
+    .burger {
+      display: none; /* Masquer le bouton burger */
+    }
+  }
+
+  /* Styles de base pour le footer (appliqués à tous les écrans) */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; 
+    background-color: #f8f9fa; 
+    width: 90%;
+    margin: 10px auto;
+  }
+  
+  footer a {
+      text-decoration:none;
+      color:black;
+  }
+  
+  footer p {
+    margin: 0; /* Réinitialiser les marges par défaut des paragraphes */
+  }
+  
+  /* Media query pour les petits écrans (typiquement en dessous de 768px) */
+  @media (max-width: 768px) {
+    footer {
+      flex-direction: column; 
+      align-items: center;    
+      text-align: center;     
+    }
+  
+    footer p {
+      margin-bottom: 10px; 
+    }
+  
+    footer a{
+      display: block;
+      margin-bottom: 5px;
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc; 
+      border-radius: 5px;
+      background-color: #fd7e1d;
+    }
+  
+  footer p a:hover{
+      color:blanchedalmond;
+  }
+  
+  }

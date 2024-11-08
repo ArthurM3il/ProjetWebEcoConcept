@@ -10,7 +10,7 @@
     <title>La terre des anges - Descriptions</title>
     <link rel="stylesheet" href="css/style-minified.css" type="text/css" media="print">
     <link rel="stylesheet" href="css/style-minified.css">
-    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mediaQueries-minified.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mediaQueries.css">
 </head>
 <header><?php
 require_once 'includes/menu.php';
@@ -37,7 +37,7 @@ $descriptions = getDescriptions($bdd);
 </div>
 </div>
 </body>
-
+<script src="js/burger.js"></script>
 <footer>
 <?php
 require 'includes/footer.php';

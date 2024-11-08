@@ -11,7 +11,7 @@ $contact = getContact($bdd)
     <title>La terre des anges - Contact</title>
     <link rel="stylesheet" href="css/style-minified.css" type="text/css" media="print">
     <link rel="stylesheet" href="css/style-minified.css">
-    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mediaQueries-minified.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mediaQueries.css">
 </head>
 <header><?php require_once 'includes/menu.php'; ?></header>
 <body>
@@ -21,6 +21,7 @@ $contact = getContact($bdd)
         <p>Pour me contacter : <a class="contact" href="mailto:<?php echo $contact->Email ?>">Envoyer un Email </a> <br> Par téléphone : <?php echo $contact->Phone ?> <br>
         Ou retrouvez moi sur <a class="contact" href="<?php echo $contact->Facebook?>">Facebook </a></p>
 </div>
+<script src="js/burger.js"></script>
 </body>
 
 <?php

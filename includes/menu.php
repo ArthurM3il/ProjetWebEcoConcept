@@ -1,4 +1,9 @@
 <img id="logo" src="./assets/imgs/logo.png">
+    <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 <nav>
     <a href="index.php">Accueil</a>
     <a href="description.php">Descriptions</a>

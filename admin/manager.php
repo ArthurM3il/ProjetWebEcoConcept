@@ -1,9 +1,9 @@
 <?php
 session_start();
-#if (!isset($_SESSION['admin'])) {
-    #header('Location: connexion.php');
-    #exit();
-#}
+if (!isset($_SESSION['admin'])) {
+    header('Location: connexion.php');
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">

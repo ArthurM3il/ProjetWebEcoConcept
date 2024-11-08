@@ -2,20 +2,31 @@
 session_start();
 require '../includes/bdd.php';
 
-if(isset($_POST['login'])) {
-    $username = $_POST['login'];
-    $password = $_POST['password'];
-    $sql = "SELECT * FROM Users WHERE username = :login AND mdp = :mdp";
+$username = $_POST['login'];
+$password = $_POST['password'];
+
+try {
+    // Préparation de la requête
+    $sql = "SELECT * FROM Users WHERE username = :login AND password = :mdp";
     $stmt = $bdd->prepare($sql);
-    $stmt->bindParam(':login', $username);
-    $stmt->bindParam(':mdp', $password);
+
+    // Liaison des paramètres
+    $stmt->bindParam(':login', $username, PDO::PARAM_STR);
+    $stmt->bindParam(':mdp', $password, PDO::PARAM_STR);
+
+    // Exécution de la requête
     $stmt->execute();
 
+    // Vérification du nombre de résultats
     if ($stmt->rowCount() > 0) {
         $_SESSION['admin'] = true;
-        header('Location: admin.php');
+        echo json_encode(['success' => true]);
         exit();
     } else {
-        $error_message = "Invalid login credentials.";
+        echo json_encode(['success' => false, 'message' => "Nom d'utilisateur et mot de passe incorrects"]);
     }
+} catch (PDOException $e) {
+    // En cas d'erreur, affiche un message
+    die("Erreur de connexion à la base de données : " . $e->getMessage());
 }
+?>

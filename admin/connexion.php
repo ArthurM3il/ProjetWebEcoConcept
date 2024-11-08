@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['admin'])) {
-    header('Location: description.php'); // Rediriger si déjà connecté
+    header('Location: manager.php'); // Rediriger si déjà connecté
     exit();
 }
 ?>
@@ -13,7 +13,7 @@ if (isset($_SESSION['admin'])) {
 </head>
 <body>
 <h2>Connexion Administrateur</h2>
-<form method="post" action="login.php">
+<form id="connexion" method="post">
     <label for="login">Login:</label>
     <input type="text" name="login" id="login" autocomplete="off" required>
     <label for="password">Mot de passe : </label>
@@ -21,5 +21,7 @@ if (isset($_SESSION['admin'])) {
     <input type="submit" value="Connecter">
 </form>
 <a href="../index.php">Retour à l'accueil</a>
+<script src="../js/connexion-minfied.js"></script>
+</script>
 </body>
 </html>
